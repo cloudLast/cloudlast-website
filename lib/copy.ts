@@ -2,29 +2,29 @@ export const copy = {
   it: {
     hero: {
       eyebrow: 'Think cloud. Build last.',
-      title: 'Soluzioni cloud progettate per durare',
+      title: 'Cloud e AI progettati per durare',
       description:
-        'Aiutiamo team di prodotto e ingegneria a progettare, costruire e operare piattaforme cloud affidabili, scalabili e sostenibili nel tempo.',
-      ctaPrimary: 'Contattaci',
-      ctaSecondary: 'Scopri di più',
+        'Progetto e realizzo soluzioni cloud moderne che integrano intelligenza artificiale in modo concreto, sostenibile e responsabile. Tecnologia potente, decisioni consapevoli, persone al centro.',
+      ctaPrimary: 'Contattami',
+      ctaSecondary: 'Scopri come lavoriamo',
     },
 
     services: {
       eyebrow: 'Servizi',
-      title: 'Dalla strategia all’operatività',
+      title: 'Dall’infrastruttura all’intelligenza applicata',
       items: [
         {
-          title: 'Piattaforme & DevOps',
+          title: 'Cloud & Platform Engineering',
           description:
-            'Pipeline CI/CD, infrastruttura as code e piattaforme self-service per i team.',
+            'Progettazione di piattaforme cloud su AWS, infrastruttura as code e ambienti pensati per crescere nel tempo, non solo per partire.',
         },
         {
-          title: 'Affidabilità & costi',
+          title: 'AI & sistemi intelligenti',
           description:
             'Osservabilità, governance e ottimizzazione della spesa con tutte le limitazioni del caso.',
         },
         {
-          title: 'SRE & Coaching',
+          title: 'Affidabilità, costi e coaching',
           description:
             'Supporto continuo su stabilità prodotto, processi e best practice.',
         },
@@ -32,18 +32,18 @@ export const copy = {
     },
 
     about: {
-      eyebrow: 'Chi siamo',
-      title: 'Un team di ingegneri, product e SRE',
+      eyebrow: 'Chi sono',
+      title: 'Ingegneria cloud e AI, con le persone al centro',
       description:
-        'Lavoriamo accanto ai team di sviluppo e di business per trasformare la strategia cloud in risultati concreti.',
+        'Cloudlast è una realtà founder-led che lavora all’intersezione tra cloud engineering e intelligenza artificiale applicata. Utilizzo piattaforme come AWS e AWS Bedrock per costruire sistemi scalabili, affidabili e pronti a integrare l’AI in modo concreto: non come scorciatoia, ma come strumento che cambia il modo in cui progettiamo software, prendiamo decisioni e operiamo infrastrutture complesse. Accanto allo sviluppo, Cloudlast promuove divulgazione tecnica su come l’AI stia trasformando il mondo dell’IT, senza perdere di vista il valore umano, il contesto e la responsabilità.',
     },
 
     contact: {
       eyebrow: 'Contatti',
       title: 'Parliamo del tuo prossimo progetto',
       description:
-        'Raccontaci obiettivi e sfide: prepareremo rapidamente una proposta chiara e concreta.',
-      cta: 'Scrivici',
+        'Se stai esplorando il cloud, l’AI o stai cercando di rendere i tuoi sistemi più affidabili e sostenibili, possiamo parlarne. Nessuna soluzione preconfezionata: partiamo dal contesto e costruiamo qualcosa che duri.',
+      cta: 'Scrivimi',
     },
   },
 }
