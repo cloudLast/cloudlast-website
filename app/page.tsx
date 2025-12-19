@@ -8,7 +8,7 @@ export default function Home() {
       {/* HERO */}
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-8">
-          <p className="text-sm uppercase tracking-widest text-cloud-gradient">
+          <p className="text-sm uppercase tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-amber-400 to-sky-400">
             {hero.eyebrow}
           </p>
 
@@ -23,14 +23,14 @@ export default function Home() {
           <div className="flex justify-center gap-4 pt-4">
             <a
               href="#contatti"
-              className="px-6 py-3 rounded-xl bg-cloud-gradient text-black font-medium hover:opacity-90 transition"
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-fuchsia-500 via-amber-400 to-sky-400 text-black font-medium shadow-lg shadow-fuchsia-500/20 hover:opacity-90 transition"
             >
               {hero.ctaPrimary}
             </a>
 
             <a
               href="#servizi"
-              className="px-6 py-3 rounded-xl border border-neutral-700 hover:bg-neutral-900 transition"
+              className="px-6 py-3 rounded-xl border border-neutral-700 bg-white/5 hover:bg-neutral-900 transition"
             >
               {hero.ctaSecondary}
             </a>
@@ -55,7 +55,7 @@ export default function Home() {
             {services.items.map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-neutral-800 bg-white/5 backdrop-blur p-6 space-y-3"
+                className="rounded-2xl border border-neutral-800/70 bg-white/5 backdrop-blur-md p-6 space-y-3 shadow-inner shadow-white/5"
               >
                 <h3 className="text-lg font-medium">{item.title}</h3>
                 <p className="text-sm text-neutral-400">
@@ -108,7 +108,7 @@ export default function Home() {
 
             <a
               href="mailto:info@cloudlast.it"
-              className="inline-block px-8 py-4 rounded-xl bg-cloud-gradient text-black font-medium hover:opacity-90 transition"
+              className="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-fuchsia-500 via-amber-400 to-sky-400 text-black font-medium shadow-lg shadow-fuchsia-500/20 hover:opacity-90 transition"
             >
               {contact.cta}
             </a>
