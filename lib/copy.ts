@@ -21,12 +21,12 @@ export const copy = {
         {
           title: 'AI & sistemi intelligenti',
           description:
-            'Integrazione dell’intelligenza artificiale tramite servizi come AWS Bedrock, con attenzione a sicurezza, osservabilità e impatto reale sui processi.',
+            'Osservabilità, governance e ottimizzazione della spesa con tutte le limitazioni del caso.',
         },
         {
           title: 'Affidabilità, costi e coaching',
           description:
-            'SRE, osservabilità e ottimizzazione dei costi cloud, affiancati da coaching tecnico per aiutare i team a prendere decisioni migliori.',
+            'Supporto continuo su stabilità prodotto, processi e best practice.',
         },
       ],
     },
