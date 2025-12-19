@@ -4,6 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-black text-white antialiased;
+    /* Replacing Tailwind @apply with equivalent CSS for Tailwind v4 compatibility */
+    background-color: #000; /* bg-black */
+    color: #fff; /* text-white */
+    -webkit-font-smoothing: antialiased; /* antialiased */
+    -moz-osx-font-smoothing: grayscale;
   }
 }

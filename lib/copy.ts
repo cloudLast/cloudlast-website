@@ -21,12 +21,12 @@ export const copy = {
         {
           title: 'Affidabilità & costi',
           description:
-            'Osservabilità, governance e ottimizzazione della spesa con guardrail chiari.',
+            'Osservabilità, governance e ottimizzazione della spesa con tutte le limitazioni del caso.',
         },
         {
           title: 'SRE & Coaching',
           description:
-            'Supporto continuo su reliability engineering, processi e best practice.',
+            'Supporto continuo su stabilità prodotto, processi e best practice.',
         },
       ],
     },
