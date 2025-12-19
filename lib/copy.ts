@@ -5,7 +5,7 @@ export const copy = {
       title: 'Cloud e AI progettati per durare',
       description:
         'Progetto e realizzo soluzioni cloud moderne che integrano intelligenza artificiale in modo concreto, sostenibile e responsabile. Tecnologia potente, decisioni consapevoli, persone al centro.',
-      ctaPrimary: 'Contattaci',
+      ctaPrimary: 'Contattami',
       ctaSecondary: 'Scopri come lavoriamo',
     },
 
