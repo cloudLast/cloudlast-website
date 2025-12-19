@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==============================
+   BASE RESET
+============================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  ::selection {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+/* ==============================
+   BRAND UTILITIES (OK IN V4)
+============================== */
+
+@layer utilities {
+  .text-cloud-gradient {
+    background: linear-gradient(
+      90deg,
+      #ff4d4d,
+      #ffb84d,
+      #4dff88,
+      #4dd2ff,
+      #b84dff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .bg-cloud-gradient {
+    background: linear-gradient(
+      90deg,
+      #ff4d4d,
+      #ffb84d,
+      #4dff88,
+      #4dd2ff,
+      #b84dff
+    );
+  }
+}
