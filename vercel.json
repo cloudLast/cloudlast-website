@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cloudlast.it"
+        }
+      ],
+      "destination": "https://cloudlast.it/$1",
+      "permanent": true
+    }
+  ]
+}
