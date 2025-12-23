@@ -67,8 +67,27 @@ export const copy = {
       eyebrow: 'Contatti',
       title: 'Parliamo del tuo prossimo progetto',
       description:
-        'Se stai esplorando il cloud o l’AI e vuoi capire da dove partire, possiamo parlarne.',
-      cta: 'Scrivimi',
+        'Se stai esplorando il cloud o l’AI e vuoi capire da dove partire, fissiamo una call breve per allineare obiettivi e priorità.',
+      promise: 'Risposta in 24h',
+      privacyBadge: 'Privacy by design · GDPR-ready',
+      form: {
+        nameLabel: 'Nome e cognome',
+        emailLabel: 'Email di lavoro',
+        roleLabel: 'Ruolo',
+        projectLabel: 'Tema del progetto',
+        primaryCta: 'Richiedi call',
+        secondaryCta: 'Scrivi su WhatsApp',
+      },
+      email: 'info@cloudlast.it',
+      whatsapp: 'https://wa.me/393204255705?text=Ciao%20Cloudlast%2C%20vorrei%20parlare%20di%20un%20progetto',
+      booking: {
+        title: 'Prenota in autonomia',
+        description:
+          'Slot ottimizzati per mobile e Google Meet: 25 minuti, con reminder automatico e materiali di prep.',
+        linkLabel: 'Apri Calendly / Meet',
+        linkHref: 'https://calendly.com/cloudlast/30min',
+        secondary: 'Preferisci un altro orario? Indicacelo nel form qui accanto.',
+      },
     },
 
     results: {

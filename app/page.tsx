@@ -216,12 +216,136 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <p className="text-lg text-neutral-300 leading-relaxed">{contact.description}</p>
+        <div className="grid gap-6 lg:grid-cols-[1.6fr,1fr]">
+          <div className="rounded-2xl border border-neutral-800/60 bg-neutral-900/40 p-6 md:p-8 space-y-6">
+            <div className="space-y-3">
+              <p className="text-lg text-neutral-300 leading-relaxed">
+                {contact.description}
+              </p>
 
-          <a href="mailto:info@cloudlast.it" className="cta-primary">
-            {contact.cta}
-          </a>
+              <div className="flex flex-wrap items-center gap-3 text-sm">
+                <span className="badge border-emerald-400/30 bg-emerald-500/10 text-emerald-100">
+                  {contact.promise}
+                </span>
+                <span className="badge">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-4 w-4 text-cyan-300"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 1.5 3.75 5.25v5.692c0 5.197 3.5 9.99 8.25 11.558 4.75-1.568 8.25-6.36 8.25-11.558V5.25L12 1.5Zm0 10.615 6-3.23v2.057c0 4.103-2.448 7.79-6 9.26-3.552-1.47-6-5.157-6-9.26V8.885l6 3.23Zm0-1.73L6.74 7.5 12 4.885 17.26 7.5 12 10.385Z" />
+                  </svg>
+                  {contact.privacyBadge}
+                </span>
+              </div>
+            </div>
+
+            <form
+              className="grid gap-4 md:grid-cols-2"
+              method="POST"
+              action={`mailto:${contact.email}`}
+              encType="text/plain"
+            >
+              <label className="space-y-2">
+                <span className="text-sm text-neutral-300">{contact.form.nameLabel}</span>
+                <input
+                  type="text"
+                  name="Nome"
+                  required
+                  placeholder="Es. Laura Rossi"
+                  className="input-field"
+                />
+              </label>
+
+              <label className="space-y-2">
+                <span className="text-sm text-neutral-300">{contact.form.emailLabel}</span>
+                <input
+                  type="email"
+                  name="Email"
+                  required
+                  placeholder="nome@azienda.it"
+                  className="input-field"
+                />
+              </label>
+
+              <label className="space-y-2">
+                <span className="text-sm text-neutral-300">{contact.form.roleLabel}</span>
+                <input
+                  type="text"
+                  name="Ruolo"
+                  placeholder="Es. CTO, Head of Product"
+                  className="input-field"
+                />
+              </label>
+
+              <label className="space-y-2 md:col-span-2">
+                <span className="text-sm text-neutral-300">{contact.form.projectLabel}</span>
+                <textarea
+                  name="Tema del progetto"
+                  rows={3}
+                  placeholder="Es. Modernizzazione piattaforma, AI assistant per supporto, review architettura"
+                  className="input-field min-h-[120px]"
+                />
+              </label>
+
+              <div className="md:col-span-2 flex flex-col sm:flex-row gap-3">
+                <button type="submit" className="cta-primary w-full sm:w-auto">
+                  {contact.form.primaryCta}
+                </button>
+                <a
+                  href={contact.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cta-secondary w-full sm:w-auto"
+                >
+                  {contact.form.secondaryCta}
+                </a>
+              </div>
+
+              <p className="md:col-span-2 text-sm text-neutral-400">
+                Preferisci scrivere via email? <a href={`mailto:${contact.email}`} className="text-cyan-300 underline underline-offset-4">info@cloudlast.it</a>
+              </p>
+            </form>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.02] p-6 md:p-8 space-y-4">
+            <div className="space-y-2">
+              <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
+                {contact.booking.title}
+              </p>
+              <p className="text-lg font-semibold text-white">
+                {contact.booking.description}
+              </p>
+            </div>
+
+            <ul className="space-y-3 text-sm text-neutral-300">
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-cyan-300">•</span>
+                <span>Slot da 25 minuti, agenda pensata per mobile.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-cyan-300">•</span>
+                <span>Link Meet/Calendly generato subito dopo la prenotazione.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-cyan-300">•</span>
+                <span>Reminder automatici e recap con next steps.</span>
+              </li>
+            </ul>
+
+            <a
+              href={contact.booking.linkHref}
+              target="_blank"
+              rel="noreferrer"
+              className="cta-secondary w-full justify-center"
+            >
+              {contact.booking.linkLabel}
+            </a>
+
+            <p className="text-sm text-neutral-400">{contact.booking.secondary}</p>
+          </div>
         </div>
       </section>
     </main>
