@@ -8,7 +8,18 @@ export const copy = {
       description:
         'Progetto e realizzo soluzioni cloud moderne che integrano intelligenza artificiale in modo concreto, sostenibile e responsabile.',
       ctaPrimary: 'Contattami',
-      ctaSecondary: 'Scopri come lavoriamo',
+      ctaSecondary: 'Guarda casi',
+      highlights: [
+        { label: 'Anni di esperienza', value: '12+' },
+        { label: 'Certificazioni cloud', value: '6' },
+        { label: 'Casi AI consegnati', value: '30+' },
+      ],
+      founder: {
+        name: 'Carlo Gennaro',
+        role: 'Founder & Cloud/AI Engineer',
+        linkedin: 'https://www.linkedin.com/in/carlo-gennaro/',
+        initials: 'CG',
+      },
     },
 
     services: {

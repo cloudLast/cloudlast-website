@@ -1,10 +1,12 @@
+import Link from 'next/link'
+
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#1a1c22]/80 backdrop-blur">
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
 
         {/* Brand */}
-        <a
+        <Link
           href="/"
           aria-label="Homepage"
           className="flex items-center gap-2 font-semibold tracking-tight"
@@ -12,31 +14,31 @@ export default function Header() {
           <span className="brand text-lg">
             Cloudlast
           </span>
-        </a>
+        </Link>
 
         {/* Navigation */}
         <nav
           aria-label="Navigazione principale"
           className="hidden md:flex items-center gap-8 text-sm text-neutral-300"
         >
-          <a
+          <Link
             href="/#servizi"
             className="hover:text-white transition"
           >
             Servizi
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#chi-siamo"
             className="hover:text-white transition"
           >
             Chi siamo
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#contatti"
             className="hover:text-white transition"
           >
             Contatti
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

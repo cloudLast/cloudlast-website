@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { copy } from '@/lib/copy'
+import Link from 'next/link'
 
 export default function Footer() {
   const footer = copy.it.footer
@@ -10,7 +11,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-12 text-sm text-white/60">
 
         {/* Logo + Brand */}
-        <a href="/" aria-label="Homepage" className="mb-6 flex items-center gap-3">
+        <Link href="/" aria-label="Homepage" className="mb-6 flex items-center gap-3">
           <Image
             src="/logo.png"
             alt="Cloudlast logo"
@@ -19,7 +20,7 @@ export default function Footer() {
             className="drop-shadow-[0_0_8px_rgba(34,211,238,0.25)]"
           />
           <span className="brand">Cloudlast</span>
-        </a>
+        </Link>
 
         {/* Legal */}
         <div className="space-y-1">
