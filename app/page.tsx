@@ -3,6 +3,7 @@ import { copy } from '../lib/copy'
 
 export default function Home() {
   const { hero, services, about, contact } = copy.it
+  const [primaryService, secondaryService, tertiaryService] = services.items
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-16 md:py-24 space-y-24 md:space-y-32">
@@ -53,15 +54,24 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {services.items.map((item, index) => (
-            <div
-              key={index}
-              className="rounded-xl border border-neutral-800/60 bg-neutral-900/40 p-6 space-y-3"
-            >
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="text-sm text-neutral-300 leading-relaxed">{item.description}</p>
-            </div>
-          ))}
+          <div className="rounded-xl border border-neutral-800/60 bg-neutral-900/40 p-6 space-y-3">
+            <h3 className="text-lg font-semibold">{primaryService?.title}</h3>
+            <p className="text-sm text-neutral-300 leading-relaxed">
+              {primaryService?.description}
+            </p>
+          </div>
+          <div className="rounded-xl border border-neutral-800/60 bg-neutral-900/40 p-6 space-y-3">
+            <h3 className="text-lg font-semibold">{secondaryService?.title}</h3>
+            <p className="text-sm text-neutral-300 leading-relaxed">
+              {secondaryService?.description}
+            </p>
+          </div>
+          <div className="rounded-xl border border-neutral-800/60 bg-neutral-900/40 p-6 space-y-3">
+            <h3 className="text-lg font-semibold">{tertiaryService?.title}</h3>
+            <p className="text-sm text-neutral-300 leading-relaxed">
+              {tertiaryService?.description}
+            </p>
+          </div>
         </div>
       </section>
 
