@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { copy } from '@/lib/copy'
+import Link from 'next/link'
 
 export default function Footer() {
   const footer = copy.it.footer
