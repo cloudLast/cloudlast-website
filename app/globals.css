@@ -1,11 +1,15 @@
-@import "tailwindcss";
-
-@layer base {
-  body {
-    /* Replacing Tailwind @apply with equivalent CSS for Tailwind v4 compatibility */
-    background-color: #000; /* bg-black */
-    color: #fff; /* text-white */
-    -webkit-font-smoothing: antialiased; /* antialiased */
-    -moz-osx-font-smoothing: grayscale;
+@layer utilities {
+  /* Accent gradient — headlines / slogan only */
+  .accent-gradient {
+    background: linear-gradient(
+      90deg,
+      #22d3ee, /* cyan */
+      #5eead4, /* aqua */
+      #c084fc  /* violet */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
   }
 }
