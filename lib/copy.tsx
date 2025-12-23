@@ -21,16 +21,25 @@ export const copy = {
           title: 'Cloud & Platform Engineering',
           description:
             'Progettazione di piattaforme cloud su AWS, infrastruttura as code e ambienti pensati per crescere nel tempo.',
+          deliverables: ['Landing zone sicura e multi-account', 'Pipeline CI/CD con IaC', 'Observability by design'],
+          learnMoreHref: '#cloud-platform',
+          cta: 'Scopri',
         },
         {
           title: 'AI & sistemi intelligenti',
           description:
             'Integrazione di sistemi AI con attenzione a governance, osservabilità e sostenibilità.',
+          deliverables: ['Prototipi LLM e agent', 'Guardrail e monitoring AI', 'Integrazione nei processi di delivery'],
+          learnMoreHref: '#ai-sistemi',
+          cta: 'Scopri',
         },
         {
           title: 'Affidabilità, costi e coaching',
           description:
             'Supporto su stabilità del prodotto, ottimizzazione dei costi e processi di lavoro.',
+          deliverables: ['Well-Architected review', 'Piani di riduzione costi', 'Coaching a team e leadership'],
+          learnMoreHref: '#affidabilita',
+          cta: 'Parla con noi',
         },
       ],
     },
@@ -58,8 +67,66 @@ export const copy = {
       eyebrow: 'Contatti',
       title: 'Parliamo del tuo prossimo progetto',
       description:
-        'Se stai esplorando il cloud o l’AI e vuoi capire da dove partire, possiamo parlarne.',
-      cta: 'Scrivimi',
+        'Se stai esplorando il cloud o l’AI e vuoi capire da dove partire, fissiamo una call breve per allineare obiettivi e priorità.',
+      promise: 'Risposta in 24h',
+      privacyBadge: 'Privacy by design · GDPR-ready',
+      form: {
+        nameLabel: 'Nome e cognome',
+        emailLabel: 'Email di lavoro',
+        roleLabel: 'Ruolo',
+        projectLabel: 'Tema del progetto',
+        primaryCta: 'Richiedi call',
+        secondaryCta: 'Scrivi su WhatsApp',
+      },
+      email: 'info@cloudlast.it',
+      whatsapp: 'https://wa.me/393204255705?text=Ciao%20Cloudlast%2C%20vorrei%20parlare%20di%20un%20progetto',
+      booking: {
+        title: 'Prenota in autonomia',
+        description:
+          'Slot ottimizzati per mobile e Google Meet: 25 minuti, con reminder automatico e materiali di prep.',
+        linkLabel: 'Apri Calendly / Meet',
+        linkHref: 'https://calendly.com/cloudlast/30min',
+        secondary: 'Preferisci un altro orario? Indicacelo nel form qui accanto.',
+      },
+    },
+
+    results: {
+      eyebrow: 'Risultati',
+      title: 'Impatto misurabile, progetti che crescono',
+      description:
+        'Numeri e traguardi concreti raggiunti con i clienti: piattaforme più resilienti, costi sotto controllo e team che consegnano più in fretta.',
+      badges: [
+        { label: 'AWS Advanced Partner' },
+        { label: 'FinOps Certified' },
+        { label: 'Startup innovativa' },
+        { label: 'AI Reliability' },
+      ],
+      items: [
+        {
+          client: 'SaaS B2B',
+          metric: '+38% velocità di rilascio',
+          outcome: 'Delivery continuo su AWS con pipeline IaC e ambienti isolati.',
+          detail: 'Ridotto il lead time con trunk-based development e automazione QA.',
+        },
+        {
+          client: 'E-commerce',
+          metric: '-27% costi cloud',
+          outcome: 'Ottimizzazione finops con right sizing, spot e storage lifecycle.',
+          detail: 'Alert e dashboard di spesa integrate in Slack e nel runbook.',
+        },
+        {
+          client: 'Scaleup AI',
+          metric: '99.95% uptime servizi AI',
+          outcome: 'Architettura osservabile con SLO e circuit breaker per i modelli.',
+          detail: 'Failover multi-AZ e caching dei prompt per ridurre latenze.',
+        },
+        {
+          client: 'Banca digitale',
+          metric: 'ISO-ready in 6 settimane',
+          outcome: 'Hardening cloud, logging centralizzato e playbook di risposta.',
+          detail: 'Policy as code, onboarding sicuro e audit trail completo.',
+        },
+      ],
     },
 
     footer: {
