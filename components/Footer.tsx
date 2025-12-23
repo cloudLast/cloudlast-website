@@ -33,13 +33,13 @@ export default function Footer() {
         {footer.links && (
           <div className="mt-4 flex flex-wrap gap-4">
             {footer.links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="hover:text-cyan-400 transition"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         )}
