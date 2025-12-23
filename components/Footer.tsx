@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { copy } from '@/lib/copy'
 import Link from 'next/link'
 
@@ -33,23 +34,37 @@ export default function Footer() {
         {footer.links && (
           <div className="mt-4 flex flex-wrap gap-4">
             {footer.links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="hover:text-cyan-400 transition"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
-        )}
 
-        {/* Note */}
-        {footer.note && (
-          <p className="mt-6 text-xs text-white/40">
-            {footer.note}
-          </p>
-        )}
+          {/* Contacts */}
+          {footer.contacts && (
+            <div className="space-y-3">
+              <h2 className="text-sm font-semibold text-white">Contatti</h2>
+              <div className="flex flex-col gap-2 text-sm">
+                {footer.contacts.map((contact) => (
+                  <a
+                    key={contact.href}
+                    href={contact.href}
+                    className="inline-flex items-center gap-2 text-white/80 hover:text-cyan-300 transition"
+                    target={contact.href.startsWith('http') ? '_blank' : undefined}
+                    rel={contact.href.startsWith('http') ? 'noreferrer noopener' : undefined}
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-cyan-400/70" aria-hidden />
+                    {contact.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </footer>
   )
