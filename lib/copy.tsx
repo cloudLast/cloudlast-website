@@ -21,16 +21,25 @@ export const copy = {
           title: 'Cloud & Platform Engineering',
           description:
             'Progettazione di piattaforme cloud su AWS, infrastruttura as code e ambienti pensati per crescere nel tempo.',
+          deliverables: ['Landing zone sicura e multi-account', 'Pipeline CI/CD con IaC', 'Observability by design'],
+          learnMoreHref: '#cloud-platform',
+          cta: 'Scopri',
         },
         {
           title: 'AI & sistemi intelligenti',
           description:
             'Integrazione di sistemi AI con attenzione a governance, osservabilità e sostenibilità.',
+          deliverables: ['Prototipi LLM e agent', 'Guardrail e monitoring AI', 'Integrazione nei processi di delivery'],
+          learnMoreHref: '#ai-sistemi',
+          cta: 'Scopri',
         },
         {
           title: 'Affidabilità, costi e coaching',
           description:
             'Supporto su stabilità del prodotto, ottimizzazione dei costi e processi di lavoro.',
+          deliverables: ['Well-Architected review', 'Piani di riduzione costi', 'Coaching a team e leadership'],
+          learnMoreHref: '#affidabilita',
+          cta: 'Parla con noi',
         },
       ],
     },
