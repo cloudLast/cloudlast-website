@@ -117,7 +117,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-emerald-400/5 to-violet-500/10 blur-3xl" />
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-cyan-500/10 backdrop-blur">
             <div className="flex items-center justify-between text-sm text-neutral-300">
-              <span className="font-semibold">Mappa di delivery</span>
+              <span className="font-semibold">Mappa di consegna cliente</span>
               <span className="rounded-full bg-white/10 px-2 py-1 text-[11px] uppercase tracking-wide text-white">
                 Live
               </span>
@@ -400,7 +400,7 @@ export default function Home() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-0.5 text-cyan-300">•</span>
-                <span>Link Meet/Calendly generato subito dopo la prenotazione.</span>
+                <span>Link Teams generato subito dopo la prenotazione.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-0.5 text-cyan-300">•</span>
