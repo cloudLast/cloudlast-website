@@ -1,18 +1,6 @@
 import Image from 'next/image'
 import { copy } from '../lib/copy'
 
-const renderWithBrand = (text: string) => {
-  if (!text.includes('Cloudlast')) return text
-
-  const parts = text.split('Cloudlast')
-  return parts.map((part, index) => (
-    <span key={index}>
-      {part}
-      {index < parts.length - 1 && <span className="brand">Cloudlast</span>}
-    </span>
-  ))
-}
-
 export default function Home() {
   const { hero, services, about, contact } = copy.it
 
@@ -37,10 +25,10 @@ export default function Home() {
             {hero.eyebrow}
           </p>
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
-            {renderWithBrand(hero.title)}
+            {hero.title}
           </h1>
           <p className="text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-            {renderWithBrand(hero.description)}
+            {hero.description}
           </p>
         </div>
 
@@ -60,7 +48,7 @@ export default function Home() {
             {services.eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            {renderWithBrand(services.title)}
+            {services.title}
           </h2>
         </div>
 
@@ -70,10 +58,8 @@ export default function Home() {
               key={index}
               className="rounded-xl border border-neutral-800/60 bg-neutral-900/40 p-6 space-y-3"
             >
-              <h3 className="text-lg font-semibold">{renderWithBrand(item.title)}</h3>
-              <p className="text-sm text-neutral-300 leading-relaxed">
-                {renderWithBrand(item.description)}
-              </p>
+              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <p className="text-sm text-neutral-300 leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
@@ -85,14 +71,12 @@ export default function Home() {
             {about.eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            {renderWithBrand(about.title)}
+            {about.title}
           </h2>
         </div>
 
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-lg text-neutral-300 leading-relaxed">
-            {renderWithBrand(about.description)}
-          </p>
+          <p className="text-lg text-neutral-300 leading-relaxed">{about.description}</p>
         </div>
       </section>
 
@@ -102,14 +86,12 @@ export default function Home() {
             {contact.eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            {renderWithBrand(contact.title)}
+            {contact.title}
           </h2>
         </div>
 
         <div className="max-w-3xl mx-auto text-center space-y-6">
-          <p className="text-lg text-neutral-300 leading-relaxed">
-            {renderWithBrand(contact.description)}
-          </p>
+          <p className="text-lg text-neutral-300 leading-relaxed">{contact.description}</p>
 
           <a href="mailto:info@cloudlast.it" className="cta-primary">
             {contact.cta}
