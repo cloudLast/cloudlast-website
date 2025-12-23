@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { copy } from '@/lib/copy'
 
-export function Footer() {
+export default function Footer() {
   const footer = copy.it.footer
   if (!footer) return null
 
