@@ -62,6 +62,45 @@ export const copy = {
       cta: 'Scrivimi',
     },
 
+    results: {
+      eyebrow: 'Risultati',
+      title: 'Impatto misurabile, progetti che crescono',
+      description:
+        'Numeri e traguardi concreti raggiunti con i clienti: piattaforme più resilienti, costi sotto controllo e team che consegnano più in fretta.',
+      badges: [
+        { label: 'AWS Advanced Partner' },
+        { label: 'FinOps Certified' },
+        { label: 'Startup innovativa' },
+        { label: 'AI Reliability' },
+      ],
+      items: [
+        {
+          client: 'SaaS B2B',
+          metric: '+38% velocità di rilascio',
+          outcome: 'Delivery continuo su AWS con pipeline IaC e ambienti isolati.',
+          detail: 'Ridotto il lead time con trunk-based development e automazione QA.',
+        },
+        {
+          client: 'E-commerce',
+          metric: '-27% costi cloud',
+          outcome: 'Ottimizzazione finops con right sizing, spot e storage lifecycle.',
+          detail: 'Alert e dashboard di spesa integrate in Slack e nel runbook.',
+        },
+        {
+          client: 'Scaleup AI',
+          metric: '99.95% uptime servizi AI',
+          outcome: 'Architettura osservabile con SLO e circuit breaker per i modelli.',
+          detail: 'Failover multi-AZ e caching dei prompt per ridurre latenze.',
+        },
+        {
+          client: 'Banca digitale',
+          metric: 'ISO-ready in 6 settimane',
+          outcome: 'Hardening cloud, logging centralizzato e playbook di risposta.',
+          detail: 'Policy as code, onboarding sicuro e audit trail completo.',
+        },
+      ],
+    },
+
     footer: {
       brand: 'Cloudlast',
       legal: [
