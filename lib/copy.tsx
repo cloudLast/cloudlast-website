@@ -64,6 +64,16 @@ export const copy = {
 
     footer: {
       brand: 'Cloudlast',
+      ctas: [
+        {
+          label: 'Prenota una call',
+          href: '#contatti',
+        },
+        {
+          label: 'Scrivici',
+          href: 'mailto:info@cloudlast.it',
+        },
+      ],
       legal: [
         (<>
           © 2025 <span className="brand">Cloudlast</span>. Tutti i diritti riservati.
@@ -91,7 +101,7 @@ export const copy = {
         },
         {
           label: 'Email',
-          href: 'mailto:carlo.genanro@cloudlast.it',
+          href: 'mailto:info@cloudlast.it',
         },
       ],
       note:
