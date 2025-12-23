@@ -386,10 +386,8 @@ export default function Home() {
           <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.02] p-6 md:p-8 space-y-4">
             <div className="space-y-2">
               <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
-                {contact.booking.title}
               </p>
               <p className="text-lg font-semibold text-white">
-                {contact.booking.description}
               </p>
             </div>
 
@@ -409,12 +407,10 @@ export default function Home() {
             </ul>
 
             <a
-              href={contact.booking.linkHref}
               target="_blank"
               rel="noreferrer"
               className="cta-secondary w-full justify-center"
             >
-              {contact.booking.linkLabel}
             </a>
 
             <p className="text-sm text-neutral-400">{contact.booking.secondary}</p>
