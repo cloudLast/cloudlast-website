@@ -42,14 +42,28 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-        )}
 
-        {/* Note */}
-        {footer.note && (
-          <p className="mt-6 text-xs text-white/40">
-            {footer.note}
-          </p>
-        )}
+          {/* Contacts */}
+          {footer.contacts && (
+            <div className="space-y-3">
+              <h2 className="text-sm font-semibold text-white">Contatti</h2>
+              <div className="flex flex-col gap-2 text-sm">
+                {footer.contacts.map((contact) => (
+                  <a
+                    key={contact.href}
+                    href={contact.href}
+                    className="inline-flex items-center gap-2 text-white/80 hover:text-cyan-300 transition"
+                    target={contact.href.startsWith('http') ? '_blank' : undefined}
+                    rel={contact.href.startsWith('http') ? 'noreferrer noopener' : undefined}
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-cyan-400/70" aria-hidden />
+                    {contact.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </footer>
   )
