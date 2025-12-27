@@ -3,185 +3,165 @@ import React from 'react'
 export const copy = {
   it: {
     hero: {
-      eyebrow: 'Think cloud. Build last.',
-      title: 'Cloud e AI solidi, pronti per crescere',
+      eyebrow: 'CloudLast S.r.l.',
+      title: 'Prodotti software verticali e affidabili',
       description:
-        'Cloudlast realizza siti web, e-commerce e app mobile ospitati in cloud: soluzioni digitali accessibili via internet, non servizi di archiviazione personale. Ci occupiamo noi degli aspetti tecnici, senza installazioni complesse per il cliente, e integriamo l’AI solo dove porta valore misurabile.',
-      ctaPrimary: 'Contattami',
-      ctaSecondary: 'Guarda casi',
-      highlights: [
-        { label: 'Anni di esperienza', value: '6+' },
-        { label: 'Certificazioni cloud', value: '3' },
-        { label: 'Progetti IT complessi gestiti end-to-end', value: '30+' },
-        {
-          label:
-            'Pubblicazioni su Apple Store e Google Play per visibilità globale',
-          value: '2+',
-        },
-      ],
-      founder: {
-        name: 'Carlo Gennaro',
-        role: 'Founder & Cloud / AI Engineer',
-        linkedin: 'https://www.linkedin.com/in/carlo-gennaro/',
-        initials: 'CG',
-      },
+        'CloudLast è una società di prodotto. Progettiamo e sviluppiamo internamente soluzioni digitali per settori specifici, con un approccio ingegneristico orientato a stabilità, sicurezza e continuità operativa.',
+      ctaPrimary: 'Contattaci',
+      ctaSecondary: 'Scopri i prodotti',
     },
 
     services: {
-      eyebrow: 'Servizi',
-      title: 'Soluzioni digitali gestite nel tempo',
+      eyebrow: 'Cosa facciamo',
+      title: 'Sviluppiamo software proprietario con metodo',
       description:
-        'Progettiamo e seguiamo siti web, e-commerce e app mobile in cloud. Per noi “cloud” significa servizi online affidabili e raggiungibili ovunque, che non richiedono server o configurazioni a carico del cliente e che manteniamo stabili nel tempo.',
+        'Operiamo con processi chiari e una struttura tecnica dedicata. Ogni prodotto è seguito nel tempo, con attenzione alla qualità e alla protezione dei dati.',
       items: [
         {
-          title: 'Cloud e piattaforme digitali',
+          title: 'Prodotti proprietari',
           description:
-            'Piattaforme su AWS pensate per ospitare servizi online, con ambienti separati e procedure di rilascio curate da Cloudlast.',
+            'Progettiamo e manteniamo piattaforme software di nostra proprietà, con roadmap definite internamente e cura del ciclo di vita.',
           deliverables: [
-            'Architettura cloud affidabile e monitorata',
-            'Ambienti di test e produzione controllati',
-            'Procedure di rilascio e sicurezza documentate',
+            'Roadmap di prodotto e manutenzione continuativa',
+            'Aggiornamenti e gestione controllata delle release',
+            'Assistenza strutturata per clienti selezionati',
           ],
-          learnMoreHref: '#cloud-platform',
-          cta: 'Scopri',
+          learnMoreHref: '#prodotti',
+          cta: 'Dettagli',
         },
         {
-          title: 'AI applicata ai servizi digitali',
+          title: 'Soluzioni verticali',
           description:
-            'Integriamo AI in modo responsabile per migliorare prodotti e processi, con controlli chiari su sicurezza e affidabilità.',
+            'Costruiamo software per esigenze specifiche di settore, con funzionalità concrete e un linguaggio vicino agli operatori.',
           deliverables: [
-            'Assistenti e raccomandazioni guidate dai dati',
-            'Controlli e monitoraggio per un uso sicuro dell’AI',
-            'Inserimento nei flussi digitali esistenti',
+            'Analisi dei flussi operativi reali',
+            'Interfacce essenziali e orientate al lavoro quotidiano',
+            'Adozione graduale e formazione mirata',
           ],
-          learnMoreHref: '#ai-sistemi',
-          cta: 'Scopri',
+          learnMoreHref: '#prodotti',
+          cta: 'Dettagli',
         },
         {
-          title: 'Affidabilità operativa e supporto continuo',
+          title: 'Approccio ingegneristico',
           description:
-            'Gestione nel tempo di stabilità, costi e processi, per mantenere online i servizi e accompagnare i team.',
+            'Sviluppo interno, documentazione, test e controllo delle dipendenze garantiscono prodotti stabili e affidabili nel tempo.',
           deliverables: [
-            'Verifiche architetturali e piani di resilienza',
-            'Ottimizzazione dei costi e della capacità',
-            'Affiancamento a team e leadership di prodotto',
+            'Qualità del codice e verifiche tecniche regolari',
+            'Sicurezza applicativa e gestione responsabile dei dati',
+            'Monitoraggio e continuità operativa',
           ],
           learnMoreHref: '#affidabilita',
-          cta: 'Parla con noi',
+          cta: 'Approfondisci',
         },
       ],
     },
 
     about: {
       eyebrow: 'Chi siamo',
-      title: 'Ingegneria cloud e AI, con le persone al centro',
-      description: (
-        <>
-          <span className="brand">Cloudlast</span> è una realtà founder-led guidata tecnicamente da{' '}
-          <a
-            href="https://www.linkedin.com/in/carlo-gennaro/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-neutral-200 hover:text-sky-400 hover:underline transition"
-          >
-            Carlo Gennaro
-          </a>
-          . Lavoriamo su soluzioni cloud intese come servizi digitali accessibili via internet e gestiti da noi, non come archivi personali. Uniamo cloud engineering e AI applicata con metodo, documentazione e attenzione alle persone che poi useranno e governeranno le piattaforme.
-        </>
-      ),
+      title: 'Una società di prodotto con sviluppo interno',
+      description:
+        'CloudLast opera come S.r.l. italiana con focus su prodotti software proprietari. Il team cura internamente analisi, sviluppo e gestione operativa, con una struttura orientata a qualità, stabilità e sicurezza.',
+    },
+
+    products: {
+      eyebrow: 'Prodotti',
+      title: 'Software proprietario CloudLast',
+      description:
+        'Ogni prodotto nasce da esigenze concrete di settore e viene gestito direttamente dal team CloudLast.',
+      items: [
+        {
+          name: 'CloudBarber',
+          summary:
+            'Gestionale per saloni e beauty. Agenda, clienti, servizi e operatività quotidiana in un’unica piattaforma.',
+          status: 'Rollout controllato · accesso su invito',
+          cta: 'Richiedi informazioni',
+        },
+      ],
+    },
+
+    reliability: {
+      eyebrow: 'Affidabilità e sicurezza',
+      title: 'Una base solida per l’operatività quotidiana',
+      items: [
+        {
+          title: 'Infrastrutture affidabili',
+          description:
+            'Servizi ospitati su piattaforme stabili, con monitoraggio continuo e procedure di gestione chiare.',
+        },
+        {
+          title: 'GDPR e privacy',
+          description:
+            'Trattiamo i dati con attenzione e rispetto delle normative, con processi pensati per la tutela dei clienti.',
+        },
+        {
+          title: 'Continuità operativa e backup',
+          description:
+            'Backup regolari e controlli di continuità per garantire operatività anche in caso di imprevisti.',
+        },
+      ],
     },
 
     contact: {
       eyebrow: 'Contatti',
-      title: 'Parliamo del tuo prossimo progetto',
+      title: 'Richiedi informazioni',
       description:
-        'Se stai valutando come portare online un servizio o rinnovare una piattaforma esistente, possiamo organizzare una breve call per allineare obiettivi e priorità.',
-      promise: 'Risposta entro 24h',
-      privacyBadge: 'Privacy by design · GDPR-ready',
+        'Per dettagli sui prodotti CloudLast o per una valutazione preliminare, puoi contattarci tramite il form o via email.',
+      privacyBadge: 'Gestione conforme al GDPR',
       form: {
         nameLabel: 'Nome e cognome',
-        emailLabel: 'Email di lavoro',
-        roleLabel: 'Ruolo',
-        projectLabel: 'Tema o contesto del progetto',
-        primaryCta: 'Richiedi contatto',
-        secondaryCta: 'Scrivi su WhatsApp',
+        emailLabel: 'Email',
+        messageLabel: 'Messaggio',
+        primaryCta: 'Invia richiesta',
       },
       email: 'info@cloudlast.it',
-      whatsapp:
-        'https://wa.me/393204255705?text=Ciao%20Cloudlast%2C%20vorrei%20parlare%20di%20un%20progetto',
-      booking: {
-        title: 'Call su Microsoft Teams',
-        description:
-          'Le call avvengono su Microsoft Teams: nessuna installazione richiesta, link fornito subito dopo il primo contatto.',
-        secondary:
-          'Per comunicazioni rapide o informali, puoi scriverci direttamente su WhatsApp.',
-      },
+      pec: 'cloudlast@pec.it',
     },
-    results: {
-      eyebrow: 'Risultati',
-      title: 'Risultati misurabili, servizi sempre online',
-      description:
-        'Esempi di traguardi raggiunti con clienti che ci hanno affidato le proprie piattaforme digitali in cloud, con attenzione a stabilità e costi.',
-      badges: [
-        { label: 'Google Developer Program' },
-        { label: 'Apple Developer Program' },
-        {
-          label:
-            'Startup innovativa regolarmente iscritta al Registro delle Imprese',
-        },
-      ],
+
+    companyData: {
+      eyebrow: 'Dati societari',
+      title: 'Informazioni legali e societarie',
       items: [
         {
-          client: 'SaaS B2B',
-          metric: '+38% velocità di rilascio',
-          outcome:
-            'Rilasci frequenti su AWS con ambienti separati e controllati.',
-          detail: 'Automazione documentata e condivisa',
+          label: 'Ragione sociale',
+          value: 'CloudLast S.r.l.',
         },
         {
-          client: 'E-commerce',
-          metric: '-27% costi cloud',
-          outcome: 'Ottimizzazione dell’infrastruttura e del lifecycle software.',
-          detail:
-            'Monitoraggio dei costi integrato nei processi di gestione.',
+          label: 'Sede legale',
+          value: 'Napoli (NA), Viale Maria Bakunin 12',
         },
         {
-          client: 'Scaleup AI',
-          metric: '99.95% uptime servizi AI',
-          outcome:
-            'Architettura osservabile con obiettivi di servizio chiari.',
-          detail:
-            'Ridondanza geografica e protezione dalle interruzioni',
+          label: 'Codice Fiscale / Partita IVA',
+          value: '10943575233',
         },
         {
-          client: 'Banca digitale',
-          metric: 'ISO-ready in 6 settimane',
-          outcome:
-            'Piattaforma rafforzata con logging centralizzato e procedure chiare.',
-          detail:
-            'Controlli documentati e tracciabilità completa',
+          label: 'Registro delle Imprese',
+          value: 'Napoli',
+        },
+        {
+          label: 'PEC',
+          value: 'cloudlast@pec.it',
+        },
+        {
+          label: 'Legale rappresentante',
+          value: 'Carlo Gennaro',
+        },
+        {
+          label: 'Oggetto sociale (sintesi)',
+          value:
+            'Sviluppo e gestione di prodotti software proprietari e servizi digitali correlati.',
         },
       ],
     },
 
     footer: {
       brand: 'Cloudlast',
-      ctas: [
-        {
-          label: 'Prenota una call',
-          href: '#contatti',
-        },
-        {
-          label: 'Scrivici',
-          href: 'mailto:info@cloudlast.it',
-        },
-      ],
       legal: [
         <>
           © 2025 <span className="brand">Cloudlast</span>. Tutti i diritti
           riservati.
         </>,
-        'P. IVA, sede operativa e iscrizione alla Camera di Commercio in fase di completamento.',
+        'CloudLast S.r.l. · Dati societari e informazioni legali disponibili nella sezione dedicata.',
+        'Codice etico e policy interne disponibili su richiesta.',
       ],
       links: [
         {
@@ -192,23 +172,25 @@ export const copy = {
           label: 'Cookie Policy',
           href: '/cookie',
         },
+        {
+          label: 'Termini di servizio',
+          href: '/termini',
+        },
+        {
+          label: 'Dati societari',
+          href: '#dati-societari',
+        },
       ],
       contacts: [
         {
-          label: 'WhatsApp',
-          href: 'https://wa.me/393204255705',
-        },
-        {
-          label: 'LinkedIn',
-          href: 'https://www.linkedin.com/company/cloudlast',
-        },
-        {
-          label: 'Email',
+          label: 'Email: info@cloudlast.it',
           href: 'mailto:info@cloudlast.it',
         },
+        {
+          label: 'PEC: cloudlast@pec.it',
+          href: 'mailto:cloudlast@pec.it',
+        },
       ],
-      note:
-        'Preferisci partire in modo informale? Un messaggio va benissimo, anche solo per orientarti.',
     },
   },
 }
