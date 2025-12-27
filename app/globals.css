@@ -6,7 +6,8 @@
   }
 
   .cta-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-black shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:bg-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/20 transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black;
+    background: linear-gradient(90deg, #ff4d6d, #ffb347, #22d3ee, #a855f7);
   }
 
   .cta-secondary {
@@ -14,7 +15,7 @@
   }
 
   .input-field {
-    @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white shadow-inner shadow-black/30 transition focus:border-cyan-300/60 focus:outline-none focus:ring-2 focus:ring-cyan-400/40 placeholder:text-neutral-500;
+    @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white shadow-inner shadow-black/30 transition focus:border-fuchsia-300/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-400/40 placeholder:text-neutral-500;
   }
 
   .badge {
@@ -27,9 +28,10 @@
   .accent-gradient {
     background: linear-gradient(
       90deg,
-      #22d3ee, /* cyan */
-      #5eead4, /* aqua */
-      #c084fc  /* violet */
+      #ff4d6d,
+      #ffb347,
+      #22d3ee,
+      #a855f7
     );
     -webkit-background-clip: text;
     background-clip: text;
