@@ -1,5 +1,6 @@
 import './globals.css'
 import Header from '../components/Header'
+import { Suspense } from 'react'
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 
@@ -34,7 +35,9 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
-        <Header />
+        <Suspense>
+          <Header />
+        </Suspense>
         {children}
       </body>
     </html>

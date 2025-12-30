@@ -1,5 +1,6 @@
+export const dynamic = 'force-dynamic'
+
 export default function CloudLanding() {
-    export const dynamic = 'force-dynamic'
   return (
     <main className="grid min-h-screen place-items-center px-6">
       <div className="glass glass-highlight p-8 max-w-xl w-full text-center space-y-4">
