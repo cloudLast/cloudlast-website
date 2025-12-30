@@ -1,41 +1,189 @@
 @import "tailwindcss";
 
-@layer components {
-  .brand {
-    @apply font-semibold tracking-tight text-white;
+/* =========================================================
+   BASE
+   ========================================================= */
+
+@layer base {
+  html {
+    @apply bg-neutral-950 text-neutral-100;
   }
 
-  .cta-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/20 transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black;
-    background: linear-gradient(90deg, #ff4d6d, #ffb347, #22d3ee, #a855f7);
-  }
-
-  .cta-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-black;
-  }
-
-  .input-field {
-    @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white shadow-inner shadow-black/30 transition focus:border-fuchsia-300/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-400/40 placeholder:text-neutral-500;
-  }
-
-  .badge {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-neutral-200;
+  body {
+    @apply antialiased;
   }
 }
 
+/* =========================================================
+   COMPONENTS
+   ========================================================= */
+
+@layer components {
+
+  /* ---------- Brand ---------- */
+
+  .brand {
+    @apply font-semibold tracking-tight text-neutral-100;
+  }
+
+  /* ---------- CTA PRIMARY ---------- */
+
+  .cta-primary {
+    @apply inline-flex items-center justify-center gap-2
+    rounded-full px-5 py-3 text-sm font-semibold
+    text-neutral-100
+    border border-white/15
+    shadow-lg shadow-black/40
+    transition-all duration-200
+    hover:-translate-y-0.5
+    focus-visible:outline-none
+    focus-visible:ring-2 focus-visible:ring-white/40
+    focus-visible:ring-offset-2
+    focus-visible:ring-offset-neutral-950;
+
+    background: linear-gradient(
+      180deg,
+      #1f2933 0%,
+      #020617 100%
+    );
+  }
+
+  .cta-primary:hover {
+    background: linear-gradient(
+      180deg,
+      #273444 0%,
+      #020617 100%
+    );
+  }
+
+  /* ---------- CTA SECONDARY ---------- */
+
+  .cta-secondary {
+    @apply inline-flex items-center justify-center gap-2
+    rounded-full px-5 py-3 text-sm font-semibold
+    text-neutral-200
+    border border-white/15
+    bg-white/[0.06]
+    transition-all duration-200
+    hover:-translate-y-0.5
+    hover:border-white/30
+    hover:bg-white/[0.10]
+    focus-visible:outline-none
+    focus-visible:ring-2 focus-visible:ring-white/40
+    focus-visible:ring-offset-2
+    focus-visible:ring-offset-neutral-950;
+  }
+
+  /* ---------- Input ---------- */
+
+  .input-field {
+    @apply w-full rounded-xl
+    border border-white/15
+    bg-white/[0.06]
+    px-4 py-3 text-sm text-neutral-100
+    placeholder:text-neutral-500
+    shadow-inner shadow-black/40
+    transition
+    focus:border-white/30
+    focus:outline-none
+    focus:ring-2
+    focus:ring-white/30;
+  }
+
+  /* ---------- Badge ---------- */
+
+  .badge {
+    @apply inline-flex items-center gap-2
+    rounded-full border border-white/15
+    bg-white/[0.06]
+    px-3 py-1 text-xs font-medium
+    text-neutral-300;
+  }
+
+  /* ---------- Glass Cards ---------- */
+
+  .glass {
+    @apply rounded-2xl
+    border border-white/15
+    bg-white/[0.05]
+    backdrop-blur-xl
+    shadow-[0_12px_40px_rgba(0,0,0,0.45)]
+    transition;
+  }
+
+  .glass:hover {
+    @apply border-white/30;
+  }
+
+  .glass-highlight {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-highlight::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background:
+      radial-gradient(
+        80% 60% at 10% -10%,
+        rgba(255,255,255,0.12),
+        transparent 45%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.06),
+        transparent 55%
+      );
+    pointer-events: none;
+  }
+}
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
 @layer utilities {
-  /* Accent gradient — headlines / slogan only */
+
+  /* ---------- Just do it! hjne ---------- */
+
   .accent-gradient {
     background: linear-gradient(
       90deg,
-      #ff4d6d,
-      #ffb347,
-      #22d3ee,
-      #a855f7
+      #f8fafc,
+      #94a3b8
     );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    opacity: 0.9;
     font-weight: 600;
+  }
+
+  /* ---------- Logo ticker (marquee) ---------- */
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
+
+  .logo-ticker {
+    @apply flex gap-20 whitespace-nowrap items-center;
+  }
+
+  .logo-ticker img {
+    @apply opacity-90 transition duration-300;
+  }
+
+  .logo-ticker img:hover {
+    @apply opacity-100;
   }
 }

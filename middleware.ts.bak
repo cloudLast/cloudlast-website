@@ -1,0 +1,36 @@
+import { NextResponse, type NextRequest } from 'next/server'
+
+// Map hostnames to an internal base path folder under /app
+const domainMap: Record<string, string> = {
+  'cloudlast.info': '/info',
+  'www.cloudlast.info': '/info',
+  'cloudlast.cloud': '/cloud',
+  'www.cloudlast.cloud': '/cloud',
+}
+
+export function middleware(request: NextRequest) {
+  const url = request.nextUrl
+
+  const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || ''
+  const basePath = domainMap[host.toLowerCase()]
+
+  if (!basePath) {
+    return NextResponse.next()
+  }
+
+  // Already under the basePath; let it through
+  if (url.pathname.startsWith(basePath)) {
+    return NextResponse.next()
+  }
+
+  // Rewrite to the appropriate basePath preserving the rest of the path
+  const rewriteUrl = new URL(`${basePath}${url.pathname}${url.search}`, url)
+  return NextResponse.rewrite(rewriteUrl)
+}
+
+export const config = {
+  matcher: [
+    // Match all paths except static files and Next internals
+    '/((?!_next|api|favicon.ico|.*\\.(?:png|jpg|jpeg|svg|gif|webp|ico)).*)',
+  ],
+}

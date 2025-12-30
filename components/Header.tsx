@@ -2,6 +2,9 @@
 
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
+import ThemeToggle from './ThemeToggle'
+import LocaleToggle from './LocaleToggle'
 
 const focusableSelectors = [
   'a[href]',
@@ -14,6 +17,11 @@ const focusableSelectors = [
 ].join(',')
 
 export default function Header() {
+  const params = useSearchParams()
+  const lang = (params.get('lang') === 'en') ? 'en' : 'it'
+  const labels = lang === 'en'
+    ? { servizi: 'Services', chiSiamo: 'About', contatti: 'Contact', menu: 'Menu', open: 'Open menu', close: 'Close menu' }
+    : { servizi: 'Servizi', chiSiamo: 'Chi siamo', contatti: 'Contatti', menu: 'Menu', open: 'Apri menu', close: 'Chiudi menu' }
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
   const toggleButtonRef = useRef<HTMLButtonElement>(null)
@@ -74,7 +82,7 @@ export default function Header() {
 
         {/* Brand */}
         <Link
-          href="/"
+          href={(() => { const qs = params.toString(); return qs ? `/?${qs}` : '/'})()}
           aria-label="Homepage"
           className="flex items-center gap-2 font-semibold tracking-tight"
         >
@@ -84,29 +92,17 @@ export default function Header() {
         </Link>
 
         {/* Navigation */}
-        <nav
-          aria-label="Navigazione principale"
-          className="hidden md:flex items-center gap-8 text-sm text-neutral-300"
-        >
-          <Link
-            href="/#servizi"
-            className="hover:text-white transition"
-          >
-            Servizi
-          </Link>
-          <Link
-            href="/#chi-siamo"
-            className="hover:text-white transition"
-          >
-            Chi siamo
-          </Link>
-          <Link
-            href="/#contatti"
-            className="hover:text-white transition"
-          >
-            Contatti
-          </Link>
+        <nav aria-label="Navigazione principale" className="hidden md:flex items-center gap-8 text-sm text-neutral-300">
+          <Link href="/#servizi" className="hover:text-white transition">{labels.servizi}</Link>
+          <Link href="/#chi-siamo" className="hover:text-white transition">{labels.chiSiamo}</Link>
+          <Link href="/#contatti" className="hover:text-white transition">{labels.contatti}</Link>
         </nav>
+
+        {/* Actions */}
+        <div className="hidden md:flex items-center gap-3">
+          <LocaleToggle />
+          <ThemeToggle />
+        </div>
 
         {/* Mobile toggle */}
         <button
@@ -117,7 +113,7 @@ export default function Header() {
           aria-controls="mobile-menu"
           onClick={() => setIsMenuOpen((open) => !open)}
         >
-          <span className="sr-only">{isMenuOpen ? 'Chiudi menu' : 'Apri menu'}</span>
+          <span className="sr-only">{isMenuOpen ? labels.close : labels.open}</span>
           <span
             aria-hidden
             className="relative flex h-4 w-5 flex-col justify-between"
@@ -145,7 +141,7 @@ export default function Header() {
         aria-hidden={!isMenuOpen}
       >
         <div className="flex items-center justify-between px-5 h-16 border-b border-white/10">
-          <span className="font-semibold tracking-tight">Menu</span>
+          <span className="font-semibold tracking-tight">{labels.menu}</span>
           <button
             type="button"
             className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 px-2.5 py-2 text-sm font-medium text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition"
@@ -164,7 +160,7 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
             tabIndex={isMenuOpen ? 0 : -1}
           >
-            Servizi
+            {labels.servizi}
           </Link>
           <Link
             href="/#chi-siamo"
@@ -172,7 +168,7 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
             tabIndex={isMenuOpen ? 0 : -1}
           >
-            Chi siamo
+            {labels.chiSiamo}
           </Link>
           <Link
             href="/#contatti"
@@ -180,8 +176,13 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
             tabIndex={isMenuOpen ? 0 : -1}
           >
-            Contatti
+            {labels.contatti}
           </Link>
+
+          <div className="pt-2 flex items-center gap-2">
+            <LocaleToggle />
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>
