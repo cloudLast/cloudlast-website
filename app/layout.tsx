@@ -1,8 +1,8 @@
 import './globals.css'
-import Header from '../components/Header'
 import { Suspense } from 'react'
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
+import Header from '../components/Header'
 
 export const metadata: Metadata = {
   title: {
@@ -22,10 +22,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="it" className="dark" suppressHydrationWarning>
+    <html
+      lang="it"
+      className="dark"
+      suppressHydrationWarning
+    >
       <head>
-        {/* forza il dark mode prima del render */}
-        <Script id="theme-init" strategy="beforeInteractive">
+        {/* Force dark mode before first paint */}
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+        >
           {`
             try {
               document.documentElement.classList.add('dark');
@@ -35,10 +42,13 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
-        <Suspense>
+        <Suspense fallback={null}>
           <Header />
         </Suspense>
-        {children}
+
+        <main className="flex min-h-[calc(100vh-64px)] flex-col">
+          {children}
+        </main>
       </body>
     </html>
   )
