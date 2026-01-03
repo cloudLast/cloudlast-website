@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'CloudLast Cloud',
-  description: 'Soluzioni operative CloudLast',
+  title: 'Cloudlast Cloud',
+  description: 'Soluzioni operative Cloudlast',
 }
 
 export default function CloudLayout({ children }: { children: React.ReactNode }) {

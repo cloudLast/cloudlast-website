@@ -86,7 +86,7 @@ export default function Footer() {
 
         {/* Version */}
         <div className="pt-4 border-t border-white/10 text-xs text-neutral-400 flex items-center justify-between">
-          <span>© 2025 CloudLast</span>
+          <span>© 2025 Cloudlast</span>
           <span>v1.0.0</span>
         </div>
       </div>

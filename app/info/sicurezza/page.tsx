@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Sicurezza e responsabilità',
-  description: 'Controlli, principi e trasparenza operativa di CloudLast',
+  description: 'Controlli, principi e trasparenza operativa di Cloudlast',
 }
 
 export default function SicurezzaPage({ searchParams }: { searchParams?: { lang?: string } }) {

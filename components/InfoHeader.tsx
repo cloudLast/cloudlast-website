@@ -15,7 +15,7 @@ export default function InfoHeader() {
   return (
     <header className="border-b border-white/10 bg-[#1a1c22]/80 backdrop-blur">
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-        <a href={withLang('/')} className="brand">CloudLast</a>
+        <a href={withLang('/')} className="brand">Cloudlast</a>
         <nav className="text-sm text-neutral-300 flex items-center gap-6">
           <a href={withLang('/info/sicurezza')} className="hover:text-white">{labels.sicurezza}</a>
           <a href={withLang('/info/come-lavoriamo')} className="hover:text-white">{labels.come}</a>
@@ -29,4 +29,3 @@ export default function InfoHeader() {
     </header>
   )
 }
-

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function NotFound() {
   return (
     <main className="min-h-screen flex items-center justify-center px-6 text-center">
@@ -6,9 +8,7 @@ export default function NotFound() {
         <p className="text-neutral-400">
           La risorsa richiesta non esiste.
         </p>
-        <a href="/" className="underline underline-offset-4">
-          Torna alla home
-        </a>
+        <Link href="/" className="underline underline-offset-4">Torna alla home</Link>
       </div>
     </main>
   )

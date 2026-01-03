@@ -32,9 +32,10 @@ export default function ContactForm() {
       setState('success')
       setMessage('Richiesta inviata. Ti risponderemo entro 24 ore.')
       form.reset()
-    } catch (err: any) {
+    } catch (err: unknown) {
       setState('error')
-      setMessage(err.message || 'Errore di invio')
+      const message = err instanceof Error ? err.message : 'Errore di invio'
+      setMessage(message)
     }
   }
 
@@ -79,4 +80,3 @@ export default function ContactForm() {
     </form>
   )
 }
-

@@ -20,7 +20,7 @@ Key files:
 - `app/page.tsx` — homepage
 - `app/info/*` — technical info area
 - `components/*` — header, toggles
-- `lib/copy.tsx` — IT/EN copy
+- `lib/copy.ts` — IT/EN copy
 
 ## Learn More
 

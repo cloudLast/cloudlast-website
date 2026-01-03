@@ -1,43 +1,36 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
+
+function getInitialTheme(): boolean {
+  if (typeof window === 'undefined') return true
+  try {
+    const stored = localStorage.getItem('theme')
+    if (stored) return stored === 'dark'
+  } catch {}
+  return true
+}
 
 export default function ThemeToggle() {
-  const [mounted, setMounted] = useState(false)
-  const [dark, setDark] = useState(true)
+  const [dark, setDark] = useState<boolean>(getInitialTheme)
 
   useEffect(() => {
-    setMounted(true)
-    const saved = typeof window !== 'undefined' ? localStorage.getItem('theme') : null
-    const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    const isDark = saved ? saved === 'dark' : prefersDark || document.documentElement.classList.contains('dark')
-    document.documentElement.classList.toggle('dark', isDark)
-    setDark(isDark)
-  }, [])
-
-  function toggle() {
-    const next = !dark
-    setDark(next)
-    document.documentElement.classList.toggle('dark', next)
-    try { localStorage.setItem('theme', next ? 'dark' : 'light') } catch {}
-  }
-
-  if (!mounted) return (
-    <button aria-label="Toggle theme" className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/5 text-white/80">
-      ◐
-    </button>
-  )
+    const root = document.documentElement
+    if (dark) root.classList.add('dark')
+    else root.classList.remove('dark')
+    try {
+      localStorage.setItem('theme', dark ? 'dark' : 'light')
+    } catch {}
+  }, [dark])
 
   return (
     <button
       type="button"
-      onClick={toggle}
-      aria-label="Toggle theme"
-      className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/5 text-white/90 hover:bg-white/10"
-      title={dark ? 'Tema scuro' : 'Tema chiaro'}
+      className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 px-2.5 py-2 text-xs font-medium text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition"
+      aria-pressed={dark}
+      onClick={() => setDark((v) => !v)}
     >
-      <span aria-hidden>{dark ? '🌙' : '☀️'}</span>
+      {dark ? 'Dark' : 'Light'}
     </button>
   )
 }
-

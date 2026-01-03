@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import ThemeToggle from './ThemeToggle'
 import LocaleToggle from './LocaleToggle'
 
 const focusableSelectors = [
@@ -20,8 +19,8 @@ export default function Header() {
   const params = useSearchParams()
   const lang = (params.get('lang') === 'en') ? 'en' : 'it'
   const labels = lang === 'en'
-    ? { servizi: 'Services', chiSiamo: 'About', contatti: 'Contact', menu: 'Menu', open: 'Open menu', close: 'Close menu' }
-    : { servizi: 'Servizi', chiSiamo: 'Chi siamo', contatti: 'Contatti', menu: 'Menu', open: 'Apri menu', close: 'Chiudi menu' }
+    ? { servizi: 'Services', metodo: 'Method', contatti: 'Contact', menu: 'Menu', open: 'Open menu', close: 'Close menu' }
+    : { servizi: 'Servizi', metodo: 'Come lavoriamo', contatti: 'Contatti', menu: 'Menu', open: 'Apri menu', close: 'Chiudi menu' }
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
   const toggleButtonRef = useRef<HTMLButtonElement>(null)
@@ -94,14 +93,13 @@ export default function Header() {
         {/* Navigation */}
         <nav aria-label="Navigazione principale" className="hidden md:flex items-center gap-8 text-sm text-neutral-300">
           <Link href="/#servizi" className="hover:text-white transition">{labels.servizi}</Link>
-          <Link href="/#chi-siamo" className="hover:text-white transition">{labels.chiSiamo}</Link>
+          <Link href="/#metodo" className="hover:text-white transition">{labels.metodo}</Link>
           <Link href="/#contatti" className="hover:text-white transition">{labels.contatti}</Link>
         </nav>
 
         {/* Actions */}
         <div className="hidden md:flex items-center gap-3">
           <LocaleToggle />
-          <ThemeToggle />
         </div>
 
         {/* Mobile toggle */}
@@ -163,12 +161,12 @@ export default function Header() {
             {labels.servizi}
           </Link>
           <Link
-            href="/#chi-siamo"
+            href="/#metodo"
             className="rounded-lg px-3 py-2 hover:bg-white/5 transition"
             onClick={() => setIsMenuOpen(false)}
             tabIndex={isMenuOpen ? 0 : -1}
           >
-            {labels.chiSiamo}
+            {labels.metodo}
           </Link>
           <Link
             href="/#contatti"
@@ -181,7 +179,6 @@ export default function Header() {
 
           <div className="pt-2 flex items-center gap-2">
             <LocaleToggle />
-            <ThemeToggle />
           </div>
         </div>
       </div>

@@ -4,10 +4,10 @@ import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: {
-    default: 'CloudLast · Info',
-    template: '%s · CloudLast Info',
+    default: 'Cloudlast · Info',
+    template: '%s · Cloudlast Info',
   },
-  description: 'Sicurezza, responsabilità e approccio tecnico CloudLast',
+  description: 'Sicurezza, responsabilità e approccio tecnico Cloudlast',
 }
 
 export default function InfoLayout({ children }: { children: React.ReactNode }) {
@@ -20,7 +20,7 @@ export default function InfoLayout({ children }: { children: React.ReactNode }) 
       <footer className="mt-24 border-t border-white/10 bg-[#121419]">
         <div className="mx-auto max-w-7xl px-6 py-8 text-sm text-neutral-400">
           <div className="flex items-center justify-between">
-            <span>© 2025 CloudLast</span>
+            <span>© 2025 Cloudlast</span>
             <div className="flex items-center gap-4">
               <span>v1.0.0</span>
               <a className="hover:text-white" href="https://cloudlast.it">cloudlast.it</a>

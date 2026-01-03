@@ -2,14 +2,14 @@ export default function InfoHome({ searchParams }: { searchParams?: { lang?: str
   const lang = searchParams?.lang === 'en' ? 'en' : 'it'
   const t = lang === 'en'
     ? {
-        title: 'CloudLast · Technical information',
+        title: 'Cloudlast · Technical information',
         subtitle: 'Short docs on security, working approach, and practical technical answers.',
         sicurezza: { title: 'Security and responsibility', desc: 'Controls, principles and operational transparency.' },
         come: { title: 'How we work', desc: 'Clear processes, separate environments, maintenance.' },
         faq: { title: 'Technical FAQ', desc: 'Frequent questions, honest answers.' },
       }
     : {
-        title: 'CloudLast · Informazioni tecniche',
+        title: 'Cloudlast · Informazioni tecniche',
         subtitle: 'Documentazione sintetica su sicurezza, approccio al lavoro e risposte tecniche senza marketing.',
         sicurezza: { title: 'Sicurezza e responsabilità', desc: 'Controlli, principi e trasparenza operativa.' },
         come: { title: 'Come lavoriamo', desc: 'Processi chiari, ambienti separati, manutenzione.' },

@@ -33,17 +33,16 @@ export async function POST(req: Request) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         })
-      } catch (e) {
+      } catch {
         // ignore webhook errors, still respond success
-        console.error('Webhook error', e)
+        console.error('Webhook error')
       }
     } else {
       console.log('CONTACT REQUEST', payload)
     }
 
     return NextResponse.json({ ok: true })
-  } catch (e) {
+  } catch {
     return NextResponse.json({ error: 'Errore imprevisto' }, { status: 500 })
   }
 }
-
